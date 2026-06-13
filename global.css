@@ -3,13 +3,6 @@
 @import "tailwindcss/utilities.css";
 
 @import "nativewind/theme";
-
-@import "tailwindcss/theme.css" layer(theme);
-@import "tailwindcss/preflight.css" layer(base);
-@import "tailwindcss/utilities.css";
-
-@import "nativewind/theme";
-
 @theme {
     --color-background: #fff9e3;
     --color-foreground: #081126;
@@ -21,7 +14,14 @@
     --color-border: rgba(0, 0, 0, 0.1);
     --color-success: #16a34a;
     --color-destructive: #dc2626;
-    --color-subscription: #8fd1bd;
+
+    --font-sans: sans-regular;
+    --font-sans-light: sans-light;
+    --font-sans-medium: sans-medium;
+    --font-sans-semibold: sans-semibold;
+    --font-sans-extrabold: sans-extrabold;
+    --font-sans-bold: sans-bold;
+
 
     --spacing-0: 0px;
     --spacing-1: 4px;
@@ -152,9 +152,6 @@
         @apply rounded-2xl border border-border p-4;
     }
 
-    .sub-card-expanded {
-        @apply bg-subscription;
-    }
 
     .sub-head {
         @apply flex-row items-center py-2;
