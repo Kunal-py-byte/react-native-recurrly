@@ -3,13 +3,6 @@
 @import "tailwindcss/utilities.css";
 
 @import "nativewind/theme";
-
-@import "tailwindcss/theme.css" layer(theme);
-@import "tailwindcss/preflight.css" layer(base);
-@import "tailwindcss/utilities.css";
-
-@import "nativewind/theme";
-
 @theme {
     --color-background: #fff9e3;
     --color-foreground: #081126;
@@ -21,7 +14,14 @@
     --color-border: rgba(0, 0, 0, 0.1);
     --color-success: #16a34a;
     --color-destructive: #dc2626;
-    --color-subscription: #8fd1bd;
+
+    --font-sans: sans-regular;
+    --font-sans-light: sans-light;
+    --font-sans-medium: sans-medium;
+    --font-sans-semibold: sans-semibold;
+    --font-sans-extrabold: sans-extrabold;
+    --font-sans-bold: sans-bold;
+
 
     --spacing-0: 0px;
     --spacing-1: 4px;
@@ -43,12 +43,6 @@
     --spacing-24: 96px;
     --spacing-30: 120px;
 
-    --font-sans: sans-regular;
-    --font-sans-light: sans-light;
-    --font-sans-medium: sans-medium;
-    --font-sans-semibold: sans-semibold;
-    --font-sans-bold: sans-bold;
-    --font-sans-extrabold: sans-extrabold;
 }
 
 @layer components {
@@ -77,15 +71,15 @@
     }
 
     .home-avatar {
-        @apply size-16 rounded-full;
+        @apply size-14 rounded-full;
     }
 
     .home-user-name {
-        @apply ml-4 text-2xl font-sans-bold text-primary;
+        @apply ml-4 text-xl font-sans-bold text-primary;
     }
 
     .home-add-icon {
-        @apply size-12;
+        @apply size-10;
     }
 
     .home-balance-card {
@@ -125,7 +119,7 @@
     }
 
     .upcoming-card {
-        @apply mr-4 w-44 rounded-2xl border border-black/10 bg-background p-4;
+        @apply mr-4 w-49 rounded-2xl border border-black/10 bg-background p-4;
     }
 
     .upcoming-row {
@@ -153,7 +147,7 @@
     }
 
     .sub-card-expanded {
-        @apply bg-subscription;
+        @apply bg-emerald-200;
     }
 
     .sub-head {
