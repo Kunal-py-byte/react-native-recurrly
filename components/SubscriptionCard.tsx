@@ -5,6 +5,7 @@ import clsx from "clsx";
 const SubscriptionCard =
     ({name,price,icon,billing,currency,color,category, plan, renewalDate,expanded, onPress, paymentMethod, startDate, status}:
                           SubscriptionCardProps) => {
+    const fallback = "Not Provided";
   return (
     <Pressable onPress={onPress} className={clsx('sub-card', expanded ? 'sub-card-expanded' : 'bg-card')}
                style={!expanded && color ? {backgroundColor:color} : undefined}>
@@ -33,35 +34,35 @@ const SubscriptionCard =
                         <View className="sub-row-copy">
                             <Text className="sub-label">Payment:</Text>
                             <Text className="sub-value" numberOfLines={1} ellipsizeMode="tail">
-                                {paymentMethod?.trim()}</Text>
+                                {paymentMethod?.trim() || fallback}</Text>
                         </View>
                     </View>
                     <View className="sub-row">
                         <View className="sub-row-copy">
                             <Text className="sub-label">Category:</Text>
                             <Text className="sub-value" numberOfLines={1} ellipsizeMode="tail">
-                                {category?.trim() || plan?.trim()}</Text>
+                                {category?.trim() || plan?.trim() || fallback}</Text>
                         </View>
                     </View>
                     <View className="sub-row">
                         <View className="sub-row-copy">
                             <Text className="sub-label">Started:</Text>
                             <Text className="sub-value" numberOfLines={1} ellipsizeMode="tail">
-                                {startDate ? formatSubscriptionDateTime(startDate) : ''}</Text>
+                                {startDate ? formatSubscriptionDateTime(startDate) : '' || fallback}</Text>
                         </View>
                     </View>
                     <View className="sub-row">
                         <View className="sub-row-copy">
                             <Text className="sub-label">Renewal Date:</Text>
                             <Text className="sub-value" numberOfLines={1} ellipsizeMode="tail">
-                                {renewalDate ? formatSubscriptionDateTime(renewalDate): ''}</Text>
+                                {renewalDate ? formatSubscriptionDateTime(renewalDate): ''} || fallback</Text>
                         </View>
                     </View>
                     <View className="sub-row">
                         <View className="sub-row-copy">
                             <Text className="sub-label">Status:</Text>
                             <Text className="sub-value" numberOfLines={1} ellipsizeMode="tail">
-                                {status ? formatStatusLabel(status) : ''}</Text>
+                                {status ? formatStatusLabel(status) : '' || fallback}</Text>
                         </View>
                     </View>
                 </View>

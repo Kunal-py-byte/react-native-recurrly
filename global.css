@@ -147,7 +147,7 @@
     }
 
     .sub-card-expanded {
-        @apply bg-emerald-200;
+        @apply bg-[`#8fd1bd`];
     }
 
     .sub-head {
