@@ -47,7 +47,6 @@
         "./assets/fonts/PlusJakartaSans-Regular.ttf",
         "./assets/fonts/PlusJakartaSans-SemiBold.ttf"
       ]}],
-      "expo-font",
       "expo-web-browser"
     ],
     "experiments": {
